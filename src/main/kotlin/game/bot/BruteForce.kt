@@ -10,6 +10,7 @@ fun Bot.bruteForce(sudoku: Sudoku) {
             if (cell == null) {
                 for (k in sudoku.board.values) {
                     try {
+                        this.guesses++
                         sudoku.play(i, j, k)
                     } catch (e: SudokuException) {
                         // Punish the bot for error.
