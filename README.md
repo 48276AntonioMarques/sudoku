@@ -37,22 +37,29 @@ Each row, column or square can only contain one of each of the numbers from 1 to
  - Guesses
 All the values presented are suggestive since they can vary based on multiple external factors.
 But the scale of this values still gives an inpression of the performace expected.
-For the following calculations was used a population of 10.000 tries.
+For the following calculations was used a population of 1.000 tries.
 ## Brute Force
-- Using [dummyGenerator](https://github.com/48276AntonioMarques/sudoku/blob/main/src/main/kotlin/game/generator/dummy.kt).
- Avg. time: 2ms
- Guesses:
- Errors:
+- Using [dummyGenerator](https://github.com/48276AntonioMarques/sudoku/blob/main/src/main/kotlin/game/generator/dummy.kt)
+ Total time: 1m50s
+ Avg. time: 2.63ms
+ Guesses: 405
+ Errors: 360
 - Using [onlineGenerator](https://github.com/48276AntonioMarques/sudoku/blob/main/src/main/kotlin/game/generator/online.kt)
- Avg. time: 0ms
- Avg. Guesses:
- Avg. Errors:
+ Total time: 11m23s
+ Avg. time: 2.69ms
+ Avg. Guesses: 464
+ Avg. Errors: 412
 ## Check Single Option
-- Using [dummyGenerator](https://github.com/48276AntonioMarques/sudoku/blob/main/src/main/kotlin/game/generator/dummy.kt).
- Avg. time: 0ms
- Guesses:
- Errors:
+- Using [dummyGenerator](https://github.com/48276AntonioMarques/sudoku/blob/main/src/main/kotlin/game/generator/dummy.kt)
+ Total time: 1m49s
+ Avg. time: 1ms
+ Guesses: 5
+ Errors: 0
 - Using [onlineGenerator](https://github.com/48276AntonioMarques/sudoku/blob/main/src/main/kotlin/game/generator/online.kt)
- Avg. time: 0ms
- Avg. Guesses:
- Avg. Errors:
+ Total time: 10m45s
+ Avg. time: 2.17ms
+ Avg. Guesses: 9
+ Avg. Errors: 0
+
+ On the Check Single Option algorithm is important to need that sometimes the alogrithm makes mistakes (3 maybe more)
+ but since we are averegaging out the values this indicates that most the time the game ends without any mistake.
